@@ -1,0 +1,27 @@
+<script>
+  let score = {
+    credit: 1,
+    subject: "CSS",
+    printOut: function () {
+      return this.subject + "과목의 학점은" + this.credit + "학점입니다.";
+    },
+  };
+
+  document.write(score.printOut() + "<br>");
+
+  score.days = 20;
+
+  document.write(score.days + "<br>");
+
+  score.printOut = function () {
+    return (
+      this.subject +
+      "과목의 학점은" +
+      this.credit +
+      "학점입니다." +
+      this.days +
+      "일"
+    );
+  };
+  document.write(score.printOut() + "<br>");
+</script>
